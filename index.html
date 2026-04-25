@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Preventive Systems | Wildfire Protection & Payments</title>
+  <meta name="description" content="Protect your home and business from wildfires with automated wildfire sprinkler systems connected to real-time monitoring and alerts." />
+  <style>
+    :root{
+      --red:#e32222;
+      --deep:#111111;
+      --ink:#1d1d1d;
+      --muted:#6d6d6d;
+      --light:#f7f7f7;
+      --white:#ffffff;
+      --orange:#ff8a00;
+      --border:#e6e6e6;
+      --shadow:0 18px 45px rgba(0,0,0,.14);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--ink);line-height:1.55;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .topbar{background:#111;color:#fff;font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .topbar .inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+    .social{display:flex;gap:14px;color:#ddd;font-size:13px}
+    .contact{display:flex;align-items:center;gap:22px;flex-wrap:wrap;color:#e9e9e9}
+    .contact span{white-space:nowrap}
+    .contact b{color:var(--red);font-weight:800;margin-right:5px}
+    header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 8px 25px rgba(0,0,0,.05)}
+    .nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;font-weight:900;color:#161616;letter-spacing:-.03em;font-size:23px}
+    .brand-mark{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#ff4b00,#e32222 55%,#7d0000);display:grid;place-items:center;color:#fff;box-shadow:0 10px 20px rgba(227,34,34,.26)}
+    .brand-mark:before{content:"🔥";font-size:25px;line-height:1}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:15px;font-weight:700;color:#232323}
+    .navlinks a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;font-weight:800;border-radius:999px;padding:14px 25px;box-shadow:0 14px 28px rgba(227,34,34,.28);transition:.2s ease;border:0;cursor:pointer;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px);background:#c91515}
+    .btn.dark{background:#111;box-shadow:0 14px 28px rgba(0,0,0,.2)}
+    .btn.outline{background:#fff;color:#111;border:1px solid #ddd;box-shadow:none}
+    .menu-label{display:none;font-weight:800}
+
+    .hero{position:relative;min-height:730px;color:#fff;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.47),rgba(0,0,0,.08)),url('https://firepreventivesystems.com/wp-content/uploads/2025/03/Home-hero-1024x532.png') center/cover no-repeat;display:flex;align-items:center;isolation:isolate}
+    .hero:after{content:"";position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(0deg,#fff,rgba(255,255,255,0));z-index:-1}
+    .hero .container{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.23);border-radius:999px;padding:9px 16px;color:#fff;font-weight:800;font-size:14px;margin-bottom:18px;backdrop-filter:blur(10px)}
+    .eyebrow:before{content:"";width:9px;height:9px;background:var(--orange);border-radius:50%;box-shadow:0 0 0 7px rgba(255,138,0,.14)}
+    .hero h1{font-size:clamp(42px,6vw,76px);line-height:.97;letter-spacing:-.06em;max-width:720px;margin-bottom:24px}
+    .hero p{font-size:19px;line-height:1.75;color:#f0f0f0;max-width:690px;margin-bottom:31px}
+    .hero-actions{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+    .hero-card{justify-self:end;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);border-radius:32px;padding:26px;width:min(415px,100%);backdrop-filter:blur(18px);box-shadow:0 35px 70px rgba(0,0,0,.25)}
+    .hero-card img{border-radius:25px;width:100%;height:260px;object-fit:cover;margin-bottom:18px}
+    .hero-card h3{font-size:25px;margin-bottom:8px;letter-spacing:-.03em}
+    .hero-card p{font-size:15px;margin:0;color:#eee;line-height:1.6}
+
+    section{padding:92px 0}
+    .section-head{max-width:770px;margin:0 auto 50px;text-align:center}
+    .kicker{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:13px;margin-bottom:10px}
+    h2{font-size:clamp(32px,4.5vw,54px);line-height:1.08;letter-spacing:-.055em;color:#131313;margin-bottom:18px}
+    .section-head p,.lead{font-size:18px;color:#666;line-height:1.8}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+    .image-stack{position:relative;min-height:480px}
+    .image-stack .main-img{position:absolute;inset:0 46px 50px 0;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}
+    .image-stack .main-img img{width:100%;height:100%;object-fit:cover}
+    .image-stack .accent-img{position:absolute;right:0;bottom:0;width:58%;border-radius:28px;overflow:hidden;border:10px solid #fff;box-shadow:var(--shadow)}
+    .image-stack .accent-img img{width:100%;height:240px;object-fit:cover}
+    .checklist{display:grid;gap:17px;margin-top:27px}
+    .check{display:flex;gap:14px;align-items:flex-start;color:#444;font-size:17px}
+    .check:before{content:"✓";width:28px;height:28px;border-radius:50%;background:#fff0f0;color:var(--red);display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+
+    .defense{background:#141414;color:#fff;position:relative;overflow:hidden}
+    .defense:before{content:"";position:absolute;inset:0;background:url('https://firepreventivesystems.com/wp-content/uploads/2025/03/pngwing.com-1-1.png') center top/cover no-repeat;opacity:.14;pointer-events:none}
+    .defense .container{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .defense h2{color:#fff}
+    .defense p{color:#d7d7d7;font-size:19px;line-height:1.75;margin-bottom:28px}
+    .defense-visual{border-radius:34px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35);min-height:370px;background:url('https://firepreventivesystems.com/wp-content/uploads/2025/03/55a8ae98c4113e96b75db6a9c82a412c.jpeg') center/cover no-repeat;position:relative}
+    .defense-visual:after{content:"Advanced Wildfire Defense";position:absolute;left:24px;bottom:24px;background:rgba(0,0,0,.63);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:18px;padding:13px 18px;font-weight:900;backdrop-filter:blur(8px)}
+
+    .features{background:#fff}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .feature{background:#fff;border:1px solid var(--border);border-radius:24px;padding:30px 24px;box-shadow:0 12px 34px rgba(0,0,0,.06);transition:.2s ease;min-height:245px}
+    .feature:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(0,0,0,.1)}
+    .icon{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#fff3ed,#ffe1e1);display:grid;place-items:center;font-size:27px;margin-bottom:20px}
+    .feature h3{font-size:21px;margin-bottom:12px;letter-spacing:-.025em}
+    .feature p{color:#666;font-size:15.5px;line-height:1.72}
+
+    .how{background:#f8f8f8;position:relative;overflow:hidden}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
+    .step{position:relative;background:#fff;border-radius:28px;padding:35px 29px;border:1px solid #ececec;box-shadow:0 15px 40px rgba(0,0,0,.06);min-height:280px;overflow:hidden}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;right:22px;top:10px;font-size:98px;font-weight:900;line-height:1;color:rgba(227,34,34,.08);letter-spacing:-.08em}
+    .step .num{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:25px;box-shadow:0 10px 25px rgba(227,34,34,.28)}
+    .step h3{font-size:24px;margin-bottom:14px;letter-spacing:-.035em}
+    .step p{color:#666;line-height:1.75}
+
+    .faq{background:#fff}
+    .faq-wrap{max-width:920px;margin:0 auto;display:grid;gap:16px}
+    details{background:#fff;border:1px solid var(--border);border-radius:20px;padding:0;box-shadow:0 8px 25px rgba(0,0,0,.045);overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:24px 28px;font-size:18px;font-weight:900;display:flex;justify-content:space-between;gap:18px;align-items:center}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:28px;line-height:1;color:var(--red)}
+    details[open] summary:after{content:"−"}
+    details p{padding:0 28px 26px;color:#666;line-height:1.8;font-size:16.5px}
+
+    .cta{padding:0;background:#fff}
+    .cta-box{position:relative;color:#fff;border-radius:36px;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.35)),url('https://firepreventivesystems.com/wp-content/uploads/2025/03/55a8ae98c4113e96b75db6a9c82a412c.jpeg') center/cover no-repeat;padding:72px;box-shadow:var(--shadow);margin-bottom:92px}
+    .cta-box h2{color:#fff;max-width:720px}
+    .cta-box p{color:#eee;font-size:18px;max-width:780px;line-height:1.8;margin-bottom:28px}
+
+    footer{background:#111;color:#fff;padding:60px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:38px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:40px;margin-bottom:25px}
+    footer .brand{color:#fff;margin-bottom:18px}
+    footer p,footer a{color:#cfcfcf}
+    footer h4{font-size:18px;margin-bottom:16px;color:#fff}
+    footer ul{list-style:none;display:grid;gap:12px}
+    .copyright{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#aaa;font-size:14px}
+
+
+    .payments-section{background:#fff;padding:100px 0;border-top:1px solid var(--border)}
+    .payment-card{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--border);border-radius:32px;box-shadow:var(--shadow);padding:54px;text-align:center}
+    .payment-card h1{font-size:clamp(38px,5vw,62px);letter-spacing:-.055em;line-height:1.05;margin-bottom:14px;color:#111;text-transform:capitalize}
+    .payment-card h3{font-size:22px;color:var(--red);margin-bottom:18px}
+    .payment-card p{font-size:18px;color:#5f5f5f;line-height:1.8;max-width:700px;margin:0 auto 28px}
+    .payment-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+    @media (max-width:640px){.payment-card{padding:36px 22px}.payment-actions .btn{width:100%}}
+
+    @media (max-width:980px){
+      .navlinks{display:none}.menu-label{display:block}.hero{min-height:auto;padding:90px 0}.hero .container,.about-grid,.defense .container{grid-template-columns:1fr}.hero-card{justify-self:start}.feature-grid,.steps{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.image-stack{min-height:420px}.cta-box{padding:48px 28px}
+    }
+    @media (max-width:640px){
+      .container{width:min(100% - 26px,var(--max))}.topbar .inner{align-items:flex-start}.contact{gap:10px;display:grid}.nav{height:74px}.brand{font-size:18px}.brand-mark{width:42px;height:42px}.hero h1{font-size:42px}.hero p{font-size:16px}.hero-card{display:none}section{padding:64px 0}.feature-grid,.steps{grid-template-columns:1fr}.image-stack{min-height:360px}.image-stack .main-img{inset:0}.image-stack .accent-img{display:none}.footer-grid{gap:25px}.social{flex-wrap:wrap}.copyright{display:grid}.btn{width:100%;padding:14px 18px}.hero-actions{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container inner">
+      <div class="contact top-only">
+        <span><b>✉</b><a href="mailto:support@firepreventivesystems.com">support@firepreventivesystems.com</a></span>
+        <span><b>☎</b><a href="tel:8663581115">866-358-1115</a></span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand"><span class="brand-mark"></span><span>Fire Preventive Systems</span></a>
+      <nav class="navlinks">
+        <a href="#payments">Payments</a>
+        <a href="#terms">Terms of Service</a>
+      </nav>
+      <a class="btn dark" href="mailto:support@firepreventivesystems.com">Email Us</a>
+      <div class="menu-label">Menu</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div>
+          <div class="eyebrow">Wild Fire Protection System</div>
+          <h1>Protect Your Home & Business from Wildfires with Fire Preventive Systems</h1>
+          <p>At Fire Preventive Systems, we bring cutting-edge protection to your doorstep with our automated sprinkler system, designed to safeguard your home from the growing threat of wildfires. Seamlessly connected to real-time weather alerts, our system springs into action when you need it most, delivering proactive defense against encroaching flames.</p>
+          <div class="hero-actions">
+            <a class="btn" href="tel:8663581115">Call 866-358-1115</a>
+            <a class="btn outline" href="mailto:support@firepreventivesystems.com">Email Us</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="https://firepreventivesystems.com/wp-content/uploads/2025/03/House-Background-1-300x263.jpg" alt="Roof Sprinkler System fire suppression system" />
+          <h3>Automated Fire Suppression</h3>
+          <p>Designed to create a protective water barrier around rooftops, soffits, fascia, and vulnerable property areas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="image-stack">
+          <div class="main-img"><img src="https://firepreventivesystems.com/wp-content/uploads/2025/03/House-Background-1-300x263.jpg" alt="Roof sprinkler system protecting home" /></div>
+          <div class="accent-img"><img src="https://firepreventivesystems.com/wp-content/uploads/2025/03/Home-hero-1024x532.png" alt="Fire Preventive systems" /></div>
+        </div>
+        <div>
+          <div class="kicker">About Our System</div>
+          <h2>Our wildfire defense system is more than just sprinklers—it’s a lifeline.</h2>
+          <p class="lead">Connected to advanced weather monitoring, it detects local fire hazards and nearby fire alerts. When danger looms, the system deploys a protective water barrier around your home, suppressing embers and reducing fire risk. It’s like having a personal firefighter on standby, 24/7.</p>
+          <div class="checklist">
+            <div class="check">Designed for homes, businesses, cabins, ranches, and high-risk properties.</div>
+            <div class="check">Targets vulnerable surfaces including rooftops, walls, vegetation, soffits, and fascia.</div>
+            <div class="check">Built around monitoring, automation, and rapid wildfire response.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="defense">
+      <div class="container">
+        <div>
+          <div class="kicker">Advanced Wildfire Defense</div>
+          <h2>Engineered for Peace of Mind</h2>
+          <p>When a wildfire approaches, your property needs more than hope. Fire Preventive Systems combines smart hardware, local weather data, monitoring, and precise water distribution to help reduce risk before flames reach your structure.</p>
+          <a class="btn" href="tel:8663581115">Call for System Details</a>
+        </div>
+        <div class="defense-visual" aria-label="Aerial smoke and wildfire monitoring image"></div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Why Choose Fire Preventive Systems?</div>
+          <h2>Protection built for speed, coverage, and reliability.</h2>
+          <p>Our system is designed to monitor risk, activate quickly, and defend key property surfaces when fire danger rises.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="icon">⚙️</div>
+            <h3>Smart Automation</h3>
+            <p>Integrated with local weather data, our sprinklers activate automatically when fire risks spike—no manual intervention required.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🛰️</div>
+            <h3>24/7 Wildfire Monitoring</h3>
+            <p>Built to perform in extreme conditions, ensuring your home stays defended even when you’re away.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🏠</div>
+            <h3>Total Coverage</h3>
+            <p>Strategically installed to shield your entire property, from rooftops to the soffit and fascia, with precision water distribution.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🛡️</div>
+            <h3>Reliable Technology</h3>
+            <p>Our system combines advanced hardware with intelligent software and it’s built to perform in extreme conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">How It Works</div>
+          <h2>Our wildfire defense system is more than just sprinklers—it’s a lifeline.</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Detect & Monitor</h3>
+            <p>Our advanced system continuously tracks wildfire threats using real-time data, AI-driven monitoring, and satellite insights.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Defend with Smart Sprinklers</h3>
+            <p>When a wildfire approaches, our automated wildfire sprinklers activate, creating a protective barrier around your property.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Integrated with Local Weather Data</h3>
+            <p>Our sprinklers activate automatically every hour as long as the fire is active near your home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="payments-section" id="payments">
+      <div class="container">
+        <div class="payment-card">
+          <div class="kicker">Payments</div>
+          <h1>Payment</h1>
+          <h3>Payments</h3>
+          <p>Please use the link below to make a payment or deposit by credit card or debit card. Any initial deposits are non-refundable.</p>
+          <div class="payment-actions">
+            <a class="btn" href="https://buy.stripe.com/4gMaEW2C05Pw41U4Bx8AE01" target="_blank" rel="noopener">Make a Payment</a>
+            <a class="btn outline" href="mailto:support@firepreventivesystems.com">Questions? Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Frequently Asked Questions</div>
+          <h2>Questions homeowners ask before installing a wildfire sprinkler system.</h2>
+        </div>
+        <div class="faq-wrap">
+          <details open>
+            <summary>How does the automated sprinkler system know when to turn on?</summary>
+            <p>Our system is smarter than your average sprinkler—it’s connected to real-time weather monitoring networks. When conditions like extreme heat, low humidity, high winds, or nearby wildfire alerts signal a threat, the system activates automatically to protect your home. You don’t need to lift a finger; it’s designed to respond faster than the flames can spread.</p>
+          </details>
+          <details>
+            <summary>Will the sprinklers damage my property or waste water?</summary>
+            <p>Not at all! Our wildfire defense system is engineered for efficiency. It uses targeted water distribution to create a protective barrier around your home, focusing on key areas like roofs, walls, and vegetation. We customize each installation to minimize runoff and maximize coverage, so you’re saving your property—not soaking it unnecessarily. Plus, it only runs when a fire risk is detected, conserving water for when it truly counts.</p>
+          </details>
+          <details>
+            <summary>Can I install this system on any type of home?</summary>
+            <p>Absolutely. Whether you own a sprawling ranch, a cozy cabin, or a modern two-story, our team tailors every Fire Preventive Systems setup to your property’s unique layout. From sloped roofs to wooded lots, we assess your home’s vulnerabilities and design a solution that fits. During your free consultation, we’ll walk you through how it works for your space—no cookie-cutter fixes here!</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Protect Your Home Today!</h2>
+          <p>Ready to defend what matters most? Contact Fire Preventive Systems for a free consultation. We’ll assess your property, design your custom wildfire defense plan, and install a system that keeps you one step ahead of disaster. Call us at 866-358-1115 or request a quote online now.</p>
+          <div class="hero-actions"><a class="btn" href="tel:8663581115">Call 866-358-1115</a><a class="btn outline" href="mailto:support@firepreventivesystems.com">support@firepreventivesystems.com</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand"><span class="brand-mark"></span><span>Wild Fire Protection Systems<br>Fire Preventive Systems</span></a>
+          <p>Automated wildfire sprinkler systems designed to protect homes and businesses across California.</p>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>2681 Ventura Blvd Oxnard Ca 93036</li>
+            <li><a href="mailto:support@firepreventivesystems.com">support@firepreventivesystems.com</a></li>
+            <li><a href="tel:8663581115">866-358-1115</a></li>
+            <li><a href="https://www.facebook.com/people/Fire-Preventive-Systems/61574653354467/" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>©2025 Fire Preventing Systems. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
